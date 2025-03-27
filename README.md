@@ -1,6 +1,6 @@
-# Astroblox Unity RPG Battle System
+# Unity RPG Battle System
 
-Breakdown of how I implemented the RPG battle system in Unity as specified in the Astroblox Unity Take Home assignment. 
+Breakdown of how I implemented the RPG battle system in Unity as specified in the  Unity Take Home assignment. 
 ## Development Process
 
 ### 1. Project Setup (0h 15m)

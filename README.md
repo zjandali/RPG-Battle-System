@@ -30,14 +30,14 @@ Breakdown of how I implemented the RPG battle system in Unity as specified in th
   - Debuffs for attack, defense, and speed with duration
 - Created Effect system to manage active effects on agents
 
-### 5. Battle UI and Visualization (1h 30m)
+### 5. Battle UI and Visualization (1h 15m)
 - Created BattleUIManager to handle overall UI
 - Implemented AgentUI component for individual agent visualization
 - Added health bars and action readiness indicators
 - Created visualization for buff/debuff effects with timers
 - Implemented battle result UI for win/loss conditions
 
-### 6. Testing and Integration (1h 00m)
+### 6. Testing and Integration (0h 45m)
 - Created default agent configurations for testing
 - Implemented BattleSystemTest script to verify functionality
 - Created UIPrefabCreator to generate UI elements programmatically
@@ -86,8 +86,9 @@ Implemented an auto-battle system as specified:
 | Agent Data Model | 1h 15m | Implementing agent classes, stats, and party system including Player and Enemy behavior patterns |
 | Turn-based Action System | 1h 00m | Creating battle manager and action queuing with time-based mechanics |
 | Action Types and Effects | 1h 00m | Implementing various actions and effects including DoT and HoT systems |
-| Battle UI and Visualization | 1h 30m | Creating UI components, battle timer, health bars, and battle result visualization |
-| **Total** | **5h 00m** | Complete implementation of the RPG battle system |
+| Battle UI and Visualization | 1h 15m | Creating UI components, battle timer, health bars, and battle result visualization |
+| Testing and Integration | 0h 45m | Testing, debugging, and ensuring all systems work together properly |
+| **Total** | **5h 30m** | Complete implementation of the RPG battle system |
 
 ## Technical Implementation Details
 

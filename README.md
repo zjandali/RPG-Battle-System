@@ -4,9 +4,9 @@ Breakdown of how I implemented the RPG battle system in Unity as specified in th
 
 ## Development Process
 
-### 1. Project Setup (0h 30m)
+### 1. Project Setup (0h 15m)
+- Downloaded Unity 2022.3.13f1
 - Created project directory structure for Unity version 2022.3.13f1
-- Set up folders for Scripts, Prefabs, Scenes, and ScriptableObjects
 - Planned the implementation approach and component architecture
 
 ### 2. Agent Data Model (1h 15m)
@@ -76,20 +76,19 @@ Used the observer pattern for battle events and UI updates:
 ### Auto-Battle System
 Implemented an auto-battle system as specified:
 - Agents automatically choose actions based on their available action types
-- Players prioritize healing allies when needed
-- Enemies have configurable aggressiveness that affects action selection
+- Agents prioritize healing allies when needed
 - Battle runs without player intervention until one side wins
 
 ## Time Tracking
 
 | Task | Time Spent | Description |
 |------|------------|-------------|
-| Project Setup | 0h 30m | Creating project directory structure and initial planning |
+| Project Setup | 0h 15m | Creating project directory structure and initial planning |
 | Agent Data Model | 1h 15m | Implementing agent classes, stats, and party system including Player and Enemy behavior patterns |
 | Turn-based Action System | 1h 00m | Creating battle manager and action queuing with time-based mechanics |
 | Action Types and Effects | 1h 00m | Implementing various actions and effects including DoT and HoT systems |
 | Battle UI and Visualization | 1h 30m | Creating UI components, battle timer, health bars, and battle result visualization |
-| **Total** | **5h 15m** | Complete implementation of the RPG battle system |
+| **Total** | **5h 00m** | Complete implementation of the RPG battle system |
 
 ## Technical Implementation Details
 

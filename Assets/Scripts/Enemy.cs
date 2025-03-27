@@ -84,11 +84,12 @@ namespace AstrobloxRPG
             return availableActions[Random.Range(0, availableActions.Count)];
         }
         
-        // Keep original ChooseAction for compatibility with the base class
-        protected override void ChooseAction()
+        // Change this method to be private without override keyword
+        private ActionType ChooseAction()
         {
-            // This is now just a stub method to satisfy the override
-            // The actual logic is in ChooseActionType
+            // Your method implementation here
+            // This should have similar logic to your ChooseActionType() method
+            return ActionType.Attack; // Placeholder return, actual implementation needed
         }
         
         private void PerformAttack()

@@ -1,6 +1,6 @@
 # Astroblox Unity RPG Battle System
 
-This project implements a simple auto-battle RPG system in Unity as specified in the Astroblox Unity Take Home assignment. The system features configurable agents with shared stats, a time-based action system, various action types and effects, and a simple UI for visualization.
+Breakdown of how I implemented the RPG battle system in Unity as specified in the Astroblox Unity Take Home assignment. (I used a lot of cursor to build this)
 
 ## Development Process
 
@@ -9,19 +9,19 @@ This project implements a simple auto-battle RPG system in Unity as specified in
 - Set up folders for Scripts, Prefabs, Scenes, and ScriptableObjects
 - Planned the implementation approach and component architecture
 
-### 2. Agent Data Model (1h 00m)
+### 2. Agent Data Model (1h 15m)
 - Created the base Agent class with shared stats (HP, attack, defense, speed)
 - Implemented Player and Enemy derived classes with different behavior patterns
 - Created AgentConfig ScriptableObject for configurable agent data
 - Implemented Party system to manage groups of agents
 
-### 3. Turn-based Action System (0h 45m)
+### 3. Turn-based Action System (1h 00m)
 - Implemented BattleManager to control battle flow
 - Created time-based action queuing based on agent speed
 - Developed framework for different action types
 - Implemented action execution system
 
-### 4. Action Types and Effects (0h 45m)
+### 4. Action Types and Effects (1h 00m)
 - Implemented various action types:
   - Direct damage with defense consideration
   - Damage over time with timed intervals
@@ -31,14 +31,14 @@ This project implements a simple auto-battle RPG system in Unity as specified in
   - Debuffs for attack, defense, and speed with duration
 - Created Effect system to manage active effects on agents
 
-### 5. Battle UI and Visualization (0h 45m)
+### 5. Battle UI and Visualization (1h 30m)
 - Created BattleUIManager to handle overall UI
 - Implemented AgentUI component for individual agent visualization
 - Added health bars and action readiness indicators
 - Created visualization for buff/debuff effects with timers
 - Implemented battle result UI for win/loss conditions
 
-### 6. Testing and Integration (0h 45m)
+### 6. Testing and Integration (1h 00m)
 - Created default agent configurations for testing
 - Implemented BattleSystemTest script to verify functionality
 - Created UIPrefabCreator to generate UI elements programmatically
@@ -84,11 +84,36 @@ Implemented an auto-battle system as specified:
 
 | Task | Time Spent | Description |
 |------|------------|-------------|
-| Project Setup | 0h 30m | Creating project structure and initial planning |
-| Agent Data Model | 1h 00m | Implementing agent classes, stats, and party system |
-| Turn-based Action System | 0h 45m | Creating battle manager and action queuing |
-| Action Types and Effects | 0h 45m | Implementing various actions and effects |
-| Battle UI and Visualization | 0h 45m | Creating UI components and visualization |
-| Testing and Integration | 0h 45m | Testing and ensuring all systems work together |
-| Documentation | 0h 30m | Documenting development process and design choices |
-| **Total** | **4h 00m** | Complete implementation of the RPG battle system |
+| Project Setup | 0h 30m | Creating project directory structure and initial planning |
+| Agent Data Model | 1h 15m | Implementing agent classes, stats, and party system including Player and Enemy behavior patterns |
+| Turn-based Action System | 1h 00m | Creating battle manager and action queuing with time-based mechanics |
+| Action Types and Effects | 1h 00m | Implementing various actions and effects including DoT and HoT systems |
+| Battle UI and Visualization | 1h 30m | Creating UI components, battle timer, health bars, and battle result visualization |
+| **Total** | **5h 15m** | Complete implementation of the RPG battle system |
+
+## Technical Implementation Details
+
+### Battle Timer System
+The battle system includes a sophisticated timer that:
+- Tracks elapsed battle time with millisecond precision
+- Supports time scaling for different battle speeds
+- Provides formatted time display (MM:SS.MS)
+- Integrates with the main UI canvas system
+
+### UI System Architecture
+- Uses TextMeshPro for high-quality text rendering
+- Dynamically creates UI elements through the UIPrefabCreator
+- Implements separate containers for player and enemy UI elements
+- Shows real-time battle state including health, effects, and action readiness
+
+## Dependencies
+- Unity 2022.3.13f1
+- Unity UI package (com.unity.ugui@1.0.0) - For creating the game interface
+- TextMesh Pro (com.unity.textmeshpro@3.0.9) - For text rendering and formatting
+
+## Setup Instructions
+1. Clone this repository
+2. Open the project in Unity 2022.3.13f1
+3. Open the main scene from Scenes/BattleScene
+4. Press Play to observe the auto-battle system in action
+
